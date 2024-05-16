@@ -1,0 +1,3 @@
+as: 100
+neighbor: 10.0.0.10
+neighbor as: 200
