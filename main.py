@@ -38,8 +38,8 @@ else:
 
 
 from netmiko import ConnectHandler
-vxr = ConnectHandler(host="192.168.131.132",
-username="mohamed",password="mohamed@123",device_type="cisco_ios")
+vxr = ConnectHandler(host="192.168.1.6",
+username="mohamed",password="mohamed@123",device_type="cisco_csr")
 print(vxr.find_prompt())
 vxr.enable()
 print(vxr.find_prompt())
