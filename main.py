@@ -1,5 +1,7 @@
 import yaml
 from netmiko import ConnectHandler
+  vxr = ConnectHandler(host="192.168.0.15",
+    username="mohamed",password="mohamed@123",device_type="cisco_ios")
 
 project = input("for static press 1 for ospf press 2 for bgp press 3: ")
 
@@ -15,8 +17,7 @@ if int(project) == 1:
     output1=temp.render(i=data)
     print(output1)
     print(data)
-    vxr = ConnectHandler(host="192.168.1.6",
-    username="mohamed",password="mohamed@123",device_type="cisco_ios")
+
     print(vxr.find_prompt())
     vxr.enable()
     print(vxr.find_prompt())
@@ -35,8 +36,7 @@ elif int(project)== 2:
     output1 = temp.render(i=data)
     print(output1)
     print(data)
-    vxr = ConnectHandler(host="192.168.1.6",
-    username="mohamed",password="mohamed@123",device_type="cisco_ios")
+  
     print(vxr.find_prompt())
     vxr.enable()
     print(vxr.find_prompt())
@@ -53,8 +53,7 @@ else:
     output1 = temp.render(i=data)
     print(output1)
     print(data)
-    vxr = ConnectHandler(host="192.168.1.6",
-    username="mohamed",password="mohamed@123",device_type="cisco_ios")
+   
     print(vxr.find_prompt())
     vxr.enable()
     print(vxr.find_prompt())
